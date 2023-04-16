@@ -14,7 +14,12 @@ function App() {
       </Helmet>
       <header className="App-header">
       </header>
-      <Login/>
+      <NavLink className='homePage' to='/Login' >
+        Login ekranı
+      </NavLink>
+      <Routes>
+        <Route path="/Login" element={<Login/>} />
+      </Routes>
     </div>
   );
 }

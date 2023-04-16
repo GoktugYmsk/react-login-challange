@@ -11,23 +11,17 @@ function Login() {
   const navigate = useNavigate();
 
   const inputSuccess = () => {
-    if (user === 'admin' && password === '1233') {
+    if (user === 'admin' && password === '1234') {
       const newToken = 'exampleToken';
       setToken(newToken);
       localStorage.setItem('token', newToken);
       console.log('Token oluşturuldu ve localStorage\'e kaydedildi.');
-      navigate('/');
+      navigate('/home');
     } else {
       console.log('Hatalı kullanıcı adı veya şifre');
     }
   };
-
-  const isLoggedIn = localStorage.getItem('token') === 'exampleToken';
-
-  if (isLoggedIn) {
-    return <Home />;
-  }
-
+  
   return (
     <div className="loginMainPage">
       <Helmet>
@@ -35,15 +29,9 @@ function Login() {
       </Helmet>
       <div className='login' >
         <input onChange={e => setUser(e.target.value)} placeholder='Kullanıcı adı' />
-        <input onChange={e => setPassword(e.target.value)} placeholder='Şifre' />
+        <input type='password' onChange={e => setPassword(e.target.value)} placeholder='Şifre' />
         <button onClick={inputSuccess} className='loginButton' >Giriş</button>
       </div>
-      <NavLink className='homePage' to='/' >
-        Anasayfa
-      </NavLink>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
     </div>
   );
 }
