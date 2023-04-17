@@ -6,13 +6,13 @@
     align-items: center;
     justify-content: center;
     color: white;
-  }
-  
-  .h3 {
+}
+
+.h3 {
     margin-bottom: 100px;
-  }
-  
-  .glare {
+}
+
+.glare {
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -21,102 +21,171 @@
     box-shadow: 0 0 5px #fff;
     opacity: 0;
     animation: glare 2s ease-out infinite;
-  }
-  
-  @keyframes glare {
+}
+
+@keyframes glare {
     0% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
-  
+
     50% {
-      opacity: 0.5;
-      transform: translate(-50%, -50%) scale(1.25);
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.25);
     }
-  
+
     100% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
     }
-  }
-  
-  .glare:nth-child(1) {
+}
+
+.glare:nth-child(1) {
     top: 10%;
     left: 5%;
     width: 30px;
     height: 30px;
     animation-delay: -1.6s;
-  }
-  
-  .glare:nth-child(2) {
+}
+
+.glare:nth-child(2) {
     top: 10%;
     left: 15%;
     width: 30px;
     height: 30px;
     animation-delay: -1.2s;
-  }
-  
-  .glare:nth-child(3) {
+}
+
+.glare:nth-child(3) {
     top: 20%;
     left: 25%;
     width: 30px;
     height: 30px;
     animation-delay: -0.8s;
-  }
-  
-  .glare:nth-child(4) {
+}
+
+.glare:nth-child(4) {
     top: 10%;
     left: 35%;
     width: 30px;
     height: 30px;
     animation-delay: -0.4s;
-  }
-  
-  .glare:nth-child(5) {
+}
+
+.glare:nth-child(5) {
     top: 20%;
     left: 45%;
     width: 30px;
     height: 30px;
     animation-delay: 0s;
-  }
-  
-  .glare:nth-child(6) {
+}
+
+.glare:nth-child(6) {
     top: 10%;
     left: 55%;
     width: 30px;
     height: 30px;
     animation-delay: 0.4s;
-  }
-  
-  .glare:nth-child(7) {
+}
+
+.glare:nth-child(7) {
     top: 20%;
     left: 65%;
     width: 30px;
     height: 30px;
     animation-delay: 0.8s;
-  }
-  
-  .glare:nth-child(8) {
+}
+
+.glare:nth-child(8) {
     top: 10%;
     left: 75%;
     width: 30px;
     height: 30px;
     animation-delay: 1.2s;
-  }
-  
-  .glare:nth-child(9) {
+}
+
+.glare:nth-child(9) {
     top: 20%;
     left: 85%;
     width: 30px;
     height: 30px;
     animation-delay: 1.6s;
-  }
-  
-  .glare:nth-child(10) {
+}
+
+.glare:nth-child(10) {
     top: 10%;
     left: 95%;
     width: 30px;
     height: 30px;
     animation-delay: 2s;
-  }
-  
+}
+
+.loginParagraph{
+    position: relative;
+    top: 80px;
+    left: 60px;
+}
+
+.loginPageBackButton {
+    position: relative;
+    top: 140px;
+    width: 120px;
+    height: 60px;
+    right: 100px;
+    cursor: pointer;
+    background: linear-gradient(to left, rgb(75, 43, 107), rgb(68, 45, 150));
+    border-style: none;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0 0 8px 4px white;
+}
+
+.loginPageBackButton:hover {
+    transform: scale(0.960);
+}
+
+.loginPageBackButton {
+    position: relative;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.loginPageBackButton:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.loginPageBackButton:hover:before {
+    opacity: 1;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

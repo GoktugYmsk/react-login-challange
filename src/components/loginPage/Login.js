@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import Home from '../homePage/index';
 import './index.css'
 
 function Login() {
@@ -22,7 +21,7 @@ function Login() {
       console.log('Hatalı kullanıcı adı veya şifre');
     }
   };
-  
+
   return (
     <div className="loginMainPage">
       <Helmet>

@@ -3,13 +3,12 @@ import React from 'react'
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
-import Login from '../loginPage/Login';
 import './index.css'
 
 function Home() {
   const navigate = useNavigate()
 
-  const LoginComeBack = () =>{
+  const LoginComeBack = () => {
     navigate('/Login')
   }
 
@@ -29,8 +28,8 @@ function Home() {
       <div className='glare' ></div>
       <div className='glare' ></div>
       <div className='glare' ></div>
-      <p>Login ekranına dönmek için</p>
-      <button onClick={LoginComeBack} className='loginPageBack' >Devam et</button>
+      <p className='loginParagraph' >Login ekranına dönmek için</p>
+      <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
     </div>
   )
 }
