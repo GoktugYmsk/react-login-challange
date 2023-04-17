@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { NavLink, Route, Routes, useNavigate } from 'react-router-dom';
 
 import Home from '../homePage/index';
+import './index.css'
 
 function Login() {
   const [user, setUser] = useState('');
@@ -32,8 +33,10 @@ function Login() {
         <input type='password' onChange={e => setPassword(e.target.value)} placeholder='Şifre' />
         <button onClick={inputSuccess} className='loginButton' >Giriş</button>
       </div>
+      {token && (
+        <div>Kod: {token}</div>
+      )}
     </div>
   );
 }
-
 export default Login;

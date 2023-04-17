@@ -3,29 +3,3 @@
     align-items: center;
     justify-content: center;
 }
-
-.login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 300px;
-    background: linear-gradient(to right,rgb(39, 18, 92),rgb(0, 64, 255));
-    width: 300px;
-    height: 300px;
-}
-
-.login input {
-    margin-bottom: 20px;
-}
-
-.loginButton {
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100px;
-    height: 20px;
-    background: red;
-    color: white;
-    border-style: none;
-    box-shadow: 0 0 4px 4px white;
-}

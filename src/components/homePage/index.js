@@ -1,13 +1,17 @@
 import React from 'react'
+
 import { Helmet } from 'react-helmet';
+
+import './index.css'
 
 function Home() {
   return (
-    <div>
+    <div className='containerHome' >
       <Helmet>
         <title>Ana Sayfa</title>
       </Helmet>
-      Anasayfa
+      <h3>Hoşgeldiniz</h3>
+      <div className='glare' ></div>
     </div>
   )
 }
