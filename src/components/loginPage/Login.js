@@ -6,10 +6,10 @@ import Home from '../homePage/index';
 import './index.css'
 
 function Login() {
-  const [user, setUser] = useState('');
-  const [password, setPassword] = useState('');
-  const [token, setToken] = useState('');
-  const navigate = useNavigate();
+  const [user, setUser] = useState('')
+  const [password, setPassword] = useState('')
+  const [token, setToken] = useState('')
+  const navigate = useNavigate()
 
   const inputSuccess = () => {
     if (user === 'admin' && password === '1234') {
