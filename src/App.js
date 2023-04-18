@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Home from './components/homePage';
-import Login from './components/loginPage/Login';
+import Login from './components/loginPage';
 import './App.css';
 
 function App() {
