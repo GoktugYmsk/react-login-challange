@@ -2,4 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+.appLoginButton{
+    width: 120px;
+    height: 40px;
+    border-style: none;
+    color: white;
+    background: linear-gradient(to left,rgb(22, 21, 72),rgb(30, 117, 151));
+    cursor: pointer;
+}
+.appLoginButton:hover{
+    transform: scale(0.9);
+    box-shadow: 0 0 3px 3px rgb(114, 99, 99);
+    text-shadow: 0 0 4px 4px white;
 }
