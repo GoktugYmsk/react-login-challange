@@ -19,9 +19,9 @@ function App() {
     <div className="App">
       {!hideEntrance && (
         <div className='entrance' >
-          <h3>Hoşgeldiniz</h3>
+          <h3 className='appH3' >Hoşgeldiniz</h3>
           <br />
-          <p>Giriş yapmak için butona tıklayın</p>
+          <p className='appParagraph' >Giriş yapmak için butona tıklayın</p>
           <button onClick={openLoginScreen} className='appLoginButton'>Devam et</button>
         </div>
       )}

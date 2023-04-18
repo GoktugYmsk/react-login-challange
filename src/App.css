@@ -4,7 +4,13 @@
     justify-content: center;
     flex-direction: column;
 }
+.appH3{
+    position: relative;
+    left: 25px;
+}
 .appLoginButton{
+    margin-top: 60px;
+    margin-left: 20px;
     width: 120px;
     height: 40px;
     border-style: none;
@@ -16,4 +22,9 @@
     transform: scale(0.9);
     box-shadow: 0 0 3px 3px rgb(114, 99, 99);
     text-shadow: 0 0 4px 4px white;
+}
+
+.appParagraph{
+    position: relative;
+    right: 20px;
 }
