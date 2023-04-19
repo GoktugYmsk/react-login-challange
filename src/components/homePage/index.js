@@ -29,7 +29,7 @@ function Home() {
       <div className='glare' ></div>
       <div className='glare' ></div>
       <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
-      {token ? (
+      {{/*token*/} ? (
         <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
       ) : (
         <button onClick={LoginComeBack} className='loginPageBackButton' >Giriş Yap</button>
