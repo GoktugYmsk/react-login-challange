@@ -28,8 +28,12 @@ function Home() {
       <div className='glare' ></div>
       <div className='glare' ></div>
       <div className='glare' ></div>
-      <p className='loginParagraph' >Login ekranına dönmek için</p>
       <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
+      {token ? (
+        <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
+      ) : (
+        <button onClick={LoginComeBack} className='loginPageBackButton' >Giriş Yap</button>
+      )}
     </div>
   )
 }
