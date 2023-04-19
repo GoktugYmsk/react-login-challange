@@ -28,7 +28,6 @@ function Home() {
       <div className='glare' ></div>
       <div className='glare' ></div>
       <div className='glare' ></div>
-      <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
       {{/*token*/} ? (
         <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
       ) : (

@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
 import './index.css';
 
 function Login() {
@@ -28,7 +26,6 @@ function Login() {
     }
   };
 
-
   const clearLocalStorage = useCallback(() => {
     localStorage.clear();
     console.log('localStorage temizlendi.');
@@ -42,8 +39,11 @@ function Login() {
   }, []);
 
   useEffect(() => {
+    const config = { headers: { "token": localStorage.getItem('token') } }
     axios
-      .get('https://mock-api-service.vercel.app/discoverFirstHorizontalList')
+      .get('https://mock-api-service.vercel.app/discoverFirstHorizontalList',
+        config
+      )
       .then((response) => {
         if (response.status < 201) {
           console.log('network 200\'ün altında başarılı bir şekilde çalışıyor');
