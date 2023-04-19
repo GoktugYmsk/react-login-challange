@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -14,7 +14,8 @@ function Login() {
 
   const inputSuccess = () => {
     if (user === 'admin' && password === '1234') {
-      const newToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+      const newToken =
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
       setToken(newToken);
       localStorage.setItem('token', newToken);
       console.log('Token oluşturuldu ve localStorage\'e kaydedildi.');
@@ -24,6 +25,11 @@ function Login() {
     }
   };
 
+  const clearLocalStorage = useCallback(() => {
+    localStorage.clear();
+    console.log('localStorage temizlendi.');
+  }, []);
+
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     if (storedToken) {
@@ -32,28 +38,27 @@ function Login() {
   }, []);
 
   useEffect(() => {
-    axios.get('https://mock-api-service.vercel.app/discoverFirstHorizontalList')
-      .then(response => {
-        if (response.status < 200) {
+    axios
+      .get('https://mock-api-service.vercel.app/discoverFirstHorizontalList')
+      .then((response) => {
+        if (response.status < 201) {
           console.log('network 200\'ün altında başarılı bir şekilde çalışıyor');
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('Hata oluştu: ', error);
       });
   }, []);
-  
-  
 
   useEffect(() => {
-    const clearLocalStorage = () => {
-      localStorage.clear();
-      console.log('localStorage temizlendi.');
-    };
     window.addEventListener('beforeunload', clearLocalStorage);
     return () => {
       window.removeEventListener('beforeunload', clearLocalStorage);
     };
+  }, [clearLocalStorage]);
+
+  useEffect(() => {
+    clearLocalStorage();
   }, []);
 
   return (
