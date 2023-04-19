@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -13,7 +14,9 @@ function Login() {
   const navigate = useNavigate();
 
   const inputSuccess = () => {
-    if (user === 'admin' && password === '1234') {
+    if (!user || !password) {
+      setError('Bu alanların doldurulması zorunludur.');
+    } else if (user === 'admin' && password === '1234') {
       const newToken =
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
       setToken(newToken);
@@ -24,6 +27,7 @@ function Login() {
       setError('Hatalı kullanıcı adı veya şifre');
     }
   };
+
 
   const clearLocalStorage = useCallback(() => {
     localStorage.clear();
