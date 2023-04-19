@@ -32,21 +32,17 @@ function Login() {
   }, []);
 
   useEffect(() => {
-    if (token) {
-      axios.get('/api/login', { headers: { Authorization: `Bearer ${token}` } })
-        .then(response => {
-          console.log('Giriş başarılı');
-        })
-        .catch(error => {
-          console.log('Hata oluştu: ', error.response.status);
-          if (error.response.status === 404) {
-            setError('Giriş başarısız');
-          } else {
-            console.log('Bilinmeyen bir hata oluştu.');
-          }
-        });
-    }
-  }, [token]);
+    axios.get('https://mock-api-service.vercel.app/discoverFirstHorizontalList')
+      .then(response => {
+        if (response.status < 200) {
+          console.log('network 200\'ün altında başarılı bir şekilde çalışıyor');
+        }
+      })
+      .catch(error => {
+        console.log('Hata oluştu: ', error);
+      });
+  }, []);
+  
   
 
   useEffect(() => {
