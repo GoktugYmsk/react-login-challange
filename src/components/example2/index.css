@@ -1,0 +1,32 @@
+.screenContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(57, 56, 96);
+    width: 600px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.screenBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screenBox>input {
+    width: 300px;
+    height: 30px;
+}
+
+.screenContainer>button {
+    cursor: pointer;
+    border-style: none;
+    background: rgb(27, 159, 159);
+    width: 200px;
+    height: 60px;
+    color: white;
+    margin-top: 120px;
+}
