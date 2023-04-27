@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-import Home from './components/homePage';
-import Login from './components/loginPage';
+import Home from './components/example1/homePage';
+import Login from './components/example1/loginPage';
+import LoginScreen from './components/example2/LoginScreen';
 import './App.css';
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 
   const openLoginScreen = () => {
     setHideEntrance(true);
-    navigate('/login');
+    navigate('/LoginScreen');
   };
 
   return (
@@ -27,7 +28,7 @@ function App() {
         </div>
       )}
       <Routes>
-        <Route path='/login' element={<Login />} />
+        <Route path='/LoginScreen' element={<LoginScreen />} />
         <Route path='/home' element={<Home />} />
       </Routes>
     </div>
@@ -35,13 +36,3 @@ function App() {
 }
 
 export default App;
-
-{/*    ***********************************************************
-       *                                                         *
-       *                                                         *
-       *       Token'ı reduxtan home sayfasına çek               *
-       *                                                         *
-       *                                                         *
-       *                                                         *
-       ***********************************************************
-*/}
