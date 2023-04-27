@@ -32,6 +32,7 @@ function App() {
       )}
       <Routes>
         <Route path='/ExampleLogin' element={<ExampleLogin />} />
+        <Route path='/Deneme' element={<Deneme />} />
       </Routes>
     </div>
   );

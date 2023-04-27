@@ -7,12 +7,10 @@ function ExampleLogin() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const handleLogin = () => {
-        // burada API çağrısı yaparak token alınabilir
-        // burada örnek olarak sabit bir token kullanıyorum
+    const handleLogin = () => {    
         const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-        localStorage.setItem("token", token); // token'ı localStorage'a kaydet
-        navigate("/"); // anasayfaya yönlendir
+        localStorage.setItem("token", token); 
+        navigate("/Deneme"); 
     };
 
     const handleSubmit = (e) => {
