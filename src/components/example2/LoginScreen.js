@@ -21,10 +21,9 @@ function LoginScreen() {
             setSaveToken(tokenAdd)
             localStorage.setItem('saveToken', tokenAdd)
             console.log('Token localeStorag`e kaydedildi ')
-            navigate('homeScreen')
+            navigate('Home')
         }
     }
-
 
     useEffect(() => {
         const config = { headers: { "saveToken": localStorage.getItem('saveToken') } }

@@ -20,7 +20,7 @@ function Login() {
       setToken(newToken);
       localStorage.setItem('token', newToken);
       console.log('Token oluşturuldu ve localStorage\'e kaydedildi.');
-      navigate('/home');
+      navigate('/ExampleLogin');
     } else {
       setError('Hatalı kullanıcı adı veya şifre');
     }

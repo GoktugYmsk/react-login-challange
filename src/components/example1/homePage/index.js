@@ -3,14 +3,17 @@ import React from 'react'
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+
 import './index.css'
 
 function Home() {
   const navigate = useNavigate()
 
   const LoginComeBack = () => {
-    navigate('/Login')
+    navigate('/Deneme')
   }
+
+  const getToken = localStorage.getItem('token')
 
   return (
     <div className='containerHome' >
@@ -28,7 +31,7 @@ function Home() {
       <div className='glare' ></div>
       <div className='glare' ></div>
       <div className='glare' ></div>
-      {{/*token*/} ? (
+      {getToken ? (
         <button onClick={LoginComeBack} className='loginPageBackButton' >Devam et</button>
       ) : (
         <button onClick={LoginComeBack} className='loginPageBackButton' >Giriş Yap</button>

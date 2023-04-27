@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import Home from './components/example1/homePage';
 import Login from './components/example1/loginPage';
 import LoginScreen from './components/example2/LoginScreen';
+import HomeScreen from './components/example2/HomeScreen';
+import Deneme from './components/deneme/Deneme';
+import ExampleLogin from './components/example3/ExampleLogin';
 import './App.css';
 
 function App() {
@@ -14,7 +17,7 @@ function App() {
 
   const openLoginScreen = () => {
     setHideEntrance(true);
-    navigate('/LoginScreen');
+    navigate('/ExampleLogin');  
   };
 
   return (
@@ -28,8 +31,7 @@ function App() {
         </div>
       )}
       <Routes>
-        <Route path='/LoginScreen' element={<LoginScreen />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/ExampleLogin' element={<ExampleLogin />} />
       </Routes>
     </div>
   );
